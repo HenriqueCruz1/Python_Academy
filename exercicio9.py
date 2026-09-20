@@ -9,3 +9,28 @@ Saída
 Imprima a mensagem "MEDIA" e a média do aluno conforme exemplo abaixo, com 1 dígito após o ponto decimal
  e com um espaço em branco antes e depois da igualdade. Assim como todos os problemas,
 não esqueça de imprimir o fim de linha após o resultado, caso contrário, você receberá "Presentation Error"."""
+
+def media():
+
+    while True:
+
+        try:
+
+            valor_A = int(input("Digite o primeiro valor: "))
+            valor_B = int(input("Digite o segundo valor: "))
+            valor_C = int(input("Digite o terceiro valor: "))
+
+        except ValueError:
+            print("Digite um numero valido")
+            continue
+
+        if valor_A < 0 or valor_B < 0 or valor_C < 0:
+            print("Digite um valor positivo.")
+        else:
+            media = (valor_A + valor_B + valor_C)/3
+            print(f"A média é {media}")
+            break
+
+media()
+
+
