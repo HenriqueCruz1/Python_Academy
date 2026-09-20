@@ -11,8 +11,18 @@ com 5 dígitos após o ponto decimal e com um espaço em branco antes e depois d
 Utilize variáveis de dupla precisão (double) e como todos os problemas,
 não esqueça de imprimir o fim de linha após o resultado, caso contrário, você receberá "Presentation Error"."""
 
-nota_A = int(input("Digite a primeira nota: "))
-nota_B = int(input("Digite a segunda nota: "))
+
+while True:
+
+    nota_A = int(input("Digite a primeira nota: "))
+    nota_B = int(input("Digite a segunda nota: "))
+
+    if (nota_A < 0 or nota_A > 10 or nota_B < 0 or nota_B > 10):
+        print("Digite um valor valido entre 0 e 10")
+
+    else: 
+        break
+
 media = (nota_A + nota_B)/2
 
 print(f"MEDIA: {media}")
